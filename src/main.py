@@ -7,7 +7,7 @@ url = config.URL
 
 
 def main():
-    return 'Hello world'
+    print('Hello world')
 
 
 if __name__ == '__main__':
