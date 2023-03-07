@@ -1,0 +1,7 @@
+async-timeout==4.0.2
+asyncio==3.4.3
+greenlet==2.0.2
+python-dotenv==1.0.0
+redis==4.5.1
+SQLAlchemy==2.0.5.post1
+typing_extensions==4.5.0
