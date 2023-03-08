@@ -1,14 +1,17 @@
-# import redis
-# from sqlalchemy import create_engine
-# import asyncio
+import asyncio
+import redis
+from sqlalchemy import create_engine
 import config
 
 url = config.URL
 
 
-def main():
-    print('Hello world')
+async def coro():
+    return 'hello world'
 
 
-if __name__ == '__main__':
-    main()
+async def main():
+    a = await asyncio.create_task(coro())
+    print(a)
+
+asyncio.run(main())
