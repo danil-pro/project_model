@@ -7,7 +7,7 @@ import aiohttp
 import requests
 import config
 import asyncio
-from redis_users import RedisUsers
+from Worker import RedisUsers
 
 url = config.URL
 data = config.DATA
@@ -21,7 +21,7 @@ print(len(users_dict))
 
 
 async def make_request(headers, session):
-    response = await session.get(lyft_url, headers=headers, data={})
+    response = await session.get(lyft_url, headers=headers, data={}, ssl=False)
     return response
 
 

@@ -3,7 +3,7 @@ import time
 import json
 
 
-class RedisUsers:
+class Worker:
     def __init__(self, url, data, worker_name, search_mode):
         self.redis = redis.from_url(url)
         self.data = data
