@@ -4,10 +4,10 @@
 # import json
 
 import aiohttp
-import requests
+# import requests
 import config
 import asyncio
-from Worker import RedisUsers
+from Worker import Worker
 
 url = config.URL
 data = config.DATA
@@ -16,7 +16,7 @@ search_mode = config.SEARCH_MODE
 
 lyft_url = "https://api.lyft.com/v1/driver-mode"
 
-users_dict = RedisUsers(url, data, worker_name, search_mode).get_users()
+users_dict = Worker(url, data, worker_name, search_mode).get_users()
 print(len(users_dict))
 
 
